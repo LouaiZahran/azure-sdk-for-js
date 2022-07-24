@@ -3873,7 +3873,7 @@ packages:
     dependencies:
       semver: 7.3.7
       shelljs: 0.8.5
-      typescript: 4.8.0-dev.20220720
+      typescript: 4.8.0-dev.20220723
     dev: false
 
   /downlevel-dts/0.4.0:
@@ -8683,8 +8683,8 @@ packages:
     hasBin: true
     dev: false
 
-  /typescript/4.8.0-dev.20220720:
-    resolution: {integrity: sha512-P2hOKzT3tkfEBDVHQYCA1yQ/1JA6cNEiEuyEavCW7obrlUExBzozuYJpXlp+m63eUxvKzOBHo8WgBD4jycvScw==}
+  /typescript/4.8.0-dev.20220723:
+    resolution: {integrity: sha512-1akRPAGXS9Fqimr8ronXEUM6nrEsMmwvs9k0i+G9SwbD46HoPBrzdGzrTuxkKcoIiau8/KmB5cP3ZA7tHOrwAg==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: false
@@ -9422,25 +9422,32 @@ packages:
     dev: false
 
   file:projects/ai-language-conversations.tgz:
-    resolution: {integrity: sha512-c7VpMLUPzzi63yMbgyb8pB3ltQmzfhC72xhnyjP4jCtGGP64thlm+p6oKOEYNFCqUDDD7ZmfQIWxg8i1ROTyBw==, tarball: file:projects/ai-language-conversations.tgz}
+    resolution: {integrity: sha512-wXXivcgBcFaowtN0VNl9+Fq9dvvLJHyLgwdvabiEOIMfjlDvWge4uRj+/V85p/7x1aKbeHwDhMV+Avg99RFnsg==, tarball: file:projects/ai-language-conversations.tgz}
     name: '@rush-temp/ai-language-conversations'
     version: 0.0.0
     dependencies:
+      '@azure-rest/core-client': 1.0.0-beta.10
       '@azure/core-lro': 2.2.4
       '@microsoft/api-extractor': 7.18.11
       '@rollup/plugin-commonjs': 21.1.0_rollup@2.76.0
       '@rollup/plugin-json': 4.1.0_rollup@2.76.0
       '@rollup/plugin-multi-entry': 4.1.0_rollup@2.76.0
       '@rollup/plugin-node-resolve': 13.3.0_rollup@2.76.0
+      '@types/node': 12.20.55
+      autorest: 3.6.2
+      dotenv: 8.6.0
+      eslint: 7.32.0
       mkdirp: 1.0.4
+      prettier: 2.2.1
       rimraf: 3.0.2
       rollup: 2.76.0
       rollup-plugin-sourcemaps: 0.6.3_rollup@2.76.0
+      source-map-support: 0.5.21
       tslib: 2.4.0
       typescript: 4.2.4
       uglify-js: 3.16.2
     transitivePeerDependencies:
-      - '@types/node'
+      - supports-color
     dev: false
 
   file:projects/ai-metrics-advisor.tgz:
