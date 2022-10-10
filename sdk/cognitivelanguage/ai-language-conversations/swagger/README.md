@@ -28,8 +28,8 @@ typescript: true
 add-credentials: false
 hide-clients: true
 v3: true
-tag: release_2022_05_15_preview
-package-version: 1.0.0-beta.1
+tag: release_2022_10_01_preview
+package-version: 1.0.0-beta.2
 modelerfour:
   lenient-model-deduplication: true
 ```
@@ -38,15 +38,15 @@ modelerfour:
 
 ```yaml
 batch:
-  - tag: release_runtime_1_1_preview
+  - tag: release_runtime_2022_10_01_preview
 ```
 
 ## Runtime
 
-These settings apply only when `--tag=release_runtime_1_1_preview` is specified on the command line.
+These settings apply only when `--tag=release_runtime_2022_10_01_preview` is specified on the command line.
 
-```yaml $(tag) == 'release_runtime_1_1_preview'
-input-file: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/e7f37e4e43b1d12fd1988fda3ed39624c4b23303/specification/cognitiveservices/data-plane/Language/preview/2022-05-15-preview/analyzeconversations.json
+```yaml $(tag) == 'release_runtime_2022_10_01_preview'
+input-file: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/cognitiveservices/data-plane/Language/preview/2022-10-01-preview/analyzeconversations.json
 output-folder: ../
 title: ConversationAnalysisClient
 ```
@@ -74,7 +74,7 @@ Customizations that should eventually be added to central autorest configuration
 
 ### Runtime API Directives
 
-```yaml $(tag) == 'release_runtime_1_1_preview'
+```yaml $(tag) == 'release_runtime_2022_10_01_preview'
 # Give analyze job LRO a return type
 directive:
   - where-operation: AnalyzeConversation_SubmitJob
@@ -87,7 +87,7 @@ directive:
       };
 ```
 
-```yaml $(tag) == 'release_runtime_1_1_preview'
+```yaml $(tag) == 'release_runtime_2022_10_01_preview'
 # Rename Runtime client operation
 directive:
   - rename-operation:
@@ -95,7 +95,7 @@ directive:
       to: AnalyzeConversation
 ```
 
-```yaml $(tag) == 'release_runtime_1_1_preview'
+```yaml $(tag) == 'release_runtime_2022_10_01_preview'
 # Rename Runtime client async operation
 directive:
   - rename-operation:
@@ -103,7 +103,7 @@ directive:
       to: ConversationAnalysis
 ```
 
-```yaml $(tag) == 'release_runtime_1_1_preview'
+```yaml $(tag) == 'release_runtime_2022_10_01_preview'
 # Rename analyze_conversation `body` to `tasks`
 directive:
     - from: swagger-document
@@ -112,7 +112,7 @@ directive:
         $["parameters"][1]["x-ms-client-name"] = "task";
 ```
 
-```yaml $(tag) == 'release_runtime_1_1_preview'
+```yaml $(tag) == 'release_runtime_2022_10_01_preview'
 # Rename begin_conversation_analysis `body` to `tasks`
 directive:
     - from: swagger-document
@@ -121,7 +121,7 @@ directive:
         $["parameters"][1]["x-ms-client-name"] = "task";
 ```
 
-```yaml $(tag) == 'release_runtime_1_1_preview'
+```yaml $(tag) == 'release_runtime_2022_10_01_preview'
 # Remove async GET operation status
 directive:
     - from: swagger-document
@@ -130,7 +130,7 @@ directive:
           delete $["/analyze-conversations/jobs/{jobId}"];
 ```
 
-```yaml $(tag) == 'release_runtime_1_1_preview'
+```yaml $(tag) == 'release_runtime_2022_10_01_preview'
 # Remove async cancel operation
 directive:
     - from: swagger-document

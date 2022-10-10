@@ -96,7 +96,7 @@ export class ConversationAnalysisClient extends coreClient.ServiceClient {
     this.endpoint = endpoint;
 
     // Assigning values to Constant parameters
-    this.apiVersion = options.apiVersion || "2022-05-15-preview";
+    this.apiVersion = options.apiVersion || "2022-10-01-preview";
     this.addCustomApiVersionPolicy(options.apiVersion);
   }
 
